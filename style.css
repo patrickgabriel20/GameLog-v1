@@ -1,0 +1,555 @@
+body {
+    background-color: #111;
+    text-align: center;
+}
+
+header p {
+    color: #aaa;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: white;
+    font-size: 48px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+
+}
+
+input {
+    width: 350px;
+    padding: 12px 15px;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    margin: 10px;
+
+    background-color: #222;
+    color: white;
+
+    outline: none;
+}
+
+button {
+    padding: 12px 22px;
+
+    background-color: #6c5ce7;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+button:hover {
+    background-color: #8b7cf6;
+}
+
+
+/* ==========================
+   CARDS
+========================== */
+
+.card {
+    background-color: #222;
+    width: 250px;
+    min-height: 500px;
+
+    margin: 30px auto;
+    padding: 20px;
+
+    border-radius: 10px;
+}
+
+.card h2 {
+    color: white;
+}
+
+.card img {
+    width: 200px;
+    border-radius: 8px;
+}
+
+
+/* ==========================
+   ESTRELAS
+========================== */
+
+.estrelas {
+    margin-top: 15px;
+}
+
+.estrelas span {
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   STATUS
+========================== */
+
+.status {
+    margin-top: 15px;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   BOTÃO SALVAR
+========================== */
+
+.salvarJogo {
+    display: block;
+    margin: 15px auto 0;
+}
+
+
+/* ==========================
+   BIBLIOTECA
+========================== */
+
+#biblioteca {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.tituloBiblioteca {
+    color: white;
+
+    font-size: 28px;
+
+    margin-top: 40px;
+    margin-bottom: 15px;
+
+    letter-spacing: 1px;
+}
+
+#filtroStatus {
+    padding: 10px 15px;
+
+    background-color: #222;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* ==========================
+   ESTRELAS DA BIBLIOTECA
+========================== */
+
+.estrelasBiblioteca {
+    font-size: 24px;
+    color: #ffd700;
+    margin-top: 10px;
+}
+
+.notaBiblioteca {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.statusBiblioteca {
+    display: block;
+
+    width: fit-content;
+
+    color: white;
+    background-color: #6c5ce7;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    margin: 10px auto 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ==========================
+   CORES DOS STATUS
+========================== */
+
+.statusBiblioteca.zerado {
+    background-color: #00b894;
+}
+
+.statusBiblioteca.jogando {
+    background-color: #0984e3;
+}
+
+.statusBiblioteca.quero-jogar {
+    background-color: #6c5ce7;
+}
+
+
+/* ==========================
+   EFEITO DOS CARDS
+========================== */
+
+#biblioteca .card {
+    width: 280px;
+    min-height: 560px;
+
+    background: linear-gradient(
+        145deg,
+        #222,
+        #181818
+    );
+
+    border: 1px solid #333;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+
+#biblioteca .card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(108, 92, 231, 0.5);
+
+}
+
+
+/* ==========================
+   IMAGEM DOS CARDS
+========================== */
+
+#biblioteca .card img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    padding: 5px;
+    border-radius: 12px;
+
+    transition: transform 0.3s;
+}
+
+#biblioteca .card:hover img {
+    transform: scale(1.03);
+}
+
+
+/* ==========================
+   BOTÕES DO CARD
+========================== */
+
+.botoesCard {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.botoesCard button {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+
+/* ==========================
+   BOTÃO REMOVER
+========================== */
+
+.removerJogo {
+    background-color: #d63031;
+}
+
+.removerJogo:hover {
+    background-color: #ff4d4d;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================
+   BOTÃO EDITAR
+========================== */
+
+.editarJogo {
+    background-color: #6c5ce7;
+}
+
+.editarJogo:hover {
+    background-color: #8b7cf6;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================
+   JANELA DE EDIÇÃO
+========================== */
+
+.janelaEdicao {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.75);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1000;
+}
+
+
+.caixaEdicao {
+    background-color: #222;
+
+    width: 350px;
+    max-width: 90%;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 30px rgba(108, 92, 231, 0.5);
+
+    text-align: center;
+}
+
+
+.caixaEdicao h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+#nomeJogoEdicao {
+    color: #aaa;
+
+    margin-bottom: 20px;
+
+    font-weight: bold;
+}
+
+
+.caixaEdicao label {
+    display: block;
+
+    color: white;
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+#notaEdicao,
+#statusEdicao {
+    width: 100%;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    box-sizing: border-box;
+}
+
+
+.botoesEdicao {
+    margin-top: 20px;
+}
+
+
+.botoesEdicao button {
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+#cancelarEdicao {
+    background-color: #555;
+}
+
+
+#cancelarEdicao:hover {
+    background-color: #777;
+}
+
+#biblioteca .card h2 {
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
+    min-height: 48px;
+}
+
+#biblioteca .card > * {
+    margin-bottom: 8px;
+}
+
+/* ==========================
+   ESTATÍSTICAS
+========================== */
+
+.tituloEstatisticas {
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    letter-spacing: 1px;
+}
+
+#estatisticas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    margin: 0 auto 45px;
+
+    max-width: 1000px;
+}
+
+.estatistica {
+    background: linear-gradient(
+        145deg,
+        #222,
+        #181818
+    );
+
+    border: 1px solid #444;
+
+    width: 160px;
+    padding: 15px;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+}
+
+.estatistica:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 10px 25px rgba(108, 92, 231, 0.4);
+}
+
+.estatistica h3 {
+    color: #aaa;
+    font-size: 15px;
+
+    min-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.estatistica p {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+
+    text-shadow:
+        0 0 8px rgba(108, 92, 231, 0.4);
+}
+
+.estatistica:last-child p {
+    color: #ffd700;
+}
+
+@media (max-width: 700px) {
+
+    #estatisticas {
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .estatistica {
+        width: 120px;
+    }
+
+    #pesquisa {
+        width: calc(100% - 40px);
+        max-width: 350px;
+    }
+
+    #botaoPesquisar {
+    margin-top: 5px;
+}
+
+#biblioteca .card {
+    width: 280px;
+    max-width: calc(100% - 20px);
+}
+
+.botoesCard {
+    flex-wrap: wrap;
+}
+
+#filtroStatus {
+    width: 90%;
+    max-width: 350px;
+}
+
+}
+
+/* ==========================
+   ÁREA DE PESQUISA
+========================== */
+
+#pesquisa {
+    margin-right: 5px;
+}
+
+#botaoPesquisar {
+    margin-left: 5px;
+}
+
+#pesquisa:focus {
+    border-color: #6c5ce7;
+
+    box-shadow:
+        0 0 10px rgba(108, 92, 231, 0.4);
+}
+
+#filtroStatus:focus {
+    border-color: #6c5ce7;
+
+    box-shadow:
+        0 0 10px rgba(108, 92, 231, 0.4);
+}
